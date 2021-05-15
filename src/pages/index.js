@@ -42,7 +42,7 @@ export default function Home() {
         <div class="personal-profile__contacts">
             <dl class="contact-list contact-list__opacity-titles">
               <dt>Who:</dt>
-              <dd>Passionate app Developer, Data story teller</dd>
+              <dd>CTO & Co-Founder</dd>
               <dt>What:</dt>
               <dd>App development and data analysis</dd>
               <dt>Where:</dt>
