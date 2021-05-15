@@ -1,8 +1,14 @@
 import React from "react"
+import $ from "jquery"
 
 import { Helmet } from "react-helmet"
 import { Link, withPrefix } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+
+// Style Imports
+import Typewriter from 'typewriter-effect';
+import Blink from 'react-blink-text';
+
 
 
 // CSS styling
@@ -10,7 +16,14 @@ import "../assets/css/main.css"
 import "../assets/css/color.css"
 import "../assets/css/monochrome.css"
 
+// JS Functions
+//import "../assets/js/jquery-2.2.4.min.js"
+import "../assets/js/menu"
+import * as menuJS from "../assets/js/menu.js"
+import MobileMenu from '../assets/js/mobile-menu'
 
+// Images
+import profilePic from "../assets/img/profilePic.jpg"
 
 
 export default function Home() {
@@ -27,14 +40,59 @@ export default function Home() {
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet"/>
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet"/>
   <script src={withPrefix('./assets/js/jquery-2.2.4.min.js')} type="text/javascript" />
+  
   </Helmet>
+
+  <div class="menu">
+    <div class="container">
+      <div class="row">
+        <div class="menu__wrapper d-none d-lg-block col-md-12">
+          <nav class="">
+            <ul>
+              <li><a href="#hello">Hello</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Whats Up?</a></li>
+              <li><a href="#blog">blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="menu__wrapper col-md-12 d-lg-none">
+          <button type="button" class="menu__mobile-button">
+            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="mobile-menu d-lg-none">
+    <div class="container">
+      <div class="mobile-menu__close">
+        <span><i class="mdi mdi-close" aria-hidden="true"></i></span>
+      </div>
+      <nav class="mobile-menu__wrapper">
+        <ul>
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">testimonials</a></li>
+          <li><a href="#blog">blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <header class="main-header">
     <div class="container">
       <div class="row personal-profile">
         <div class="col-md-4 personal-profile__avatar">
-          <img class="" src="../assets/img/profilePic.jpg" alt="avatar"/>
-          <StaticImage src="../../static/img/profilePic.jpg" />
+         <img src={profilePic} alt="avatar"/>
         </div>
         <div class="col-md-8">
         <p class="personal-profile__name">Waun Broderick_</p>
@@ -66,7 +124,19 @@ export default function Home() {
   <section id="hello" class="container section">
     <div class="row">
       <div class="col-md-10">
-        <h2 id="hello_header" class="section__title">Hi_</h2>
+      <div style={{ display: 'inline-block' }}>
+        <h2 id="hello_header" class="section__title">
+          <div><Typewriter
+            options={{
+              strings: ['Hi', 'Hi'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+        </h2>
+        </div>
         <p class="section__description">
           HSBc Computer Science graduate '18 <a href="https://www.trentu.ca/" target="_blank">@TrentU</a>, currently pursuing 
             opportunities and expertise in Full Stack Data Application Development at TD Bank Toronto.
@@ -85,7 +155,18 @@ export default function Home() {
   <section id="resume" class="container section">
   <div class="row">
     <div class="col-md-10">
-    <h2 id="resume_header" class="section__title">Resume_</h2>
+    <h2 id="resume_header" class="section__title">
+    <div><Typewriter
+            options={{
+              strings: ['Resume', 'Resume'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+    </h2>
+        
         <p class="section__description">
 
         </p>
@@ -241,7 +322,7 @@ export default function Home() {
     </div>
   </section>
 
-
+<body>
   <section id="portfolio" class="container section">
     <div class="row">
       <div class="col-md-12">
@@ -367,10 +448,72 @@ export default function Home() {
     </div>
     </div>
 
+<div class="modal fade portfolio-modal" id="portfolioModal_virtualvow" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
+        <p class="portfolio-modal__title">Virtual Vow - The Intelligent Wedding Registry</p>
+        <img class="portfolio-modal__img" src="assets/img/img_project_2_mono.png" alt="modal_img"/>
+        <p class="portfolio-modal__description">
+         soon....
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="testimonials" class="section">
+    <div class="background slider-carousel" >
+      <div class="container">
+        <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselTestimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselTestimonials" data-slide-to="1"></li>
+            <li data-target="#carouselTestimonials" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-10 col-sm-10 col-10 mr-auto ml-auto">
+                  <p class="slider-carousel__title">How do you relax?</p>
+                  <p class="slider-carousel_caption">2018 Book List</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
 
   </section>
 
 
-  <div>Hello worlzd!</div>
+  <script src="../assets/js/jquery-2.2.4.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/menu.js"></script>
+  <script src={menuJS}></script>
+  <script src="../assets/js/jquery.waypoints.js"></script>
+  <script src="../assets/js/progress-list.js"></script>
+  <script src="../assets/js/section.js"></script>
+  <script src="../assets/js/portfolio-filter.js"></script>
+  <script src="../assets/js/slider-carousel.js"></script>
+  <script src="../assets/js/mobile-menu.js"></script>
+  <script src="../assets/js/contacts.js"></script>
+  <script src="../assets/js/mbclicker.min.js"></script>
+  <script src="../assets/js/site-btn.js"></script>
+  <script src="../assets/js/style-switcher.js"></script>
+</body>
+
+
+  <div>Hello worlzds!</div>
   </>) 
 }

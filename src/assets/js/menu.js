@@ -1,5 +1,8 @@
 'use strict';
 
+import $ from "jquery"
+
+
 //Anchors
 $(function(){
     $('a[href^="#"]').click(function(){

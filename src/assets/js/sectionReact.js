@@ -1,6 +1,7 @@
 'use strict';
 import $ from "jquery"
 
+
 //Animate headers of .section
 var hideHeader = function(header) {
     header.css('text-indent', '-9999px');
