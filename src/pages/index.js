@@ -158,7 +158,7 @@ export default function Home() {
     <h2 id="resume_header" class="section__title">
     <div><Typewriter
             options={{
-              strings: ['Resume', 'Resume'],
+              strings: ['Resume', 'Education', 'Experience', 'Skills'],
               autoStart: true,
               loop: true,
               cursor: '_',
