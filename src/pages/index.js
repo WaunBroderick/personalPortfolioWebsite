@@ -46,6 +46,9 @@ ReactModal.setAppElement('#___gatsby')
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
+  const progressDiv = document.querySelector('.progressDiv')
+
+
   //Passing information to Project Modal
   const [isProjectTitle, setProjectTitle] = useState('')
   const [isProjectDescr, setProjectDescr] = useState('null')
@@ -328,89 +331,174 @@ export default function Home() {
 
 
           <p>
-            <span class="progress-list__skill-title">html5/CSS3</span>
-        
-            <span class="progress-list__skill-value">
-            
-            </span>
-
+            <span class="progress-list__skill-title">Javacript (ES6+)</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="70"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
+
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">JavaScript</span>
-            <span class="progress-list__skill-value">70%</span>
+            <span class="progress-list__skill-title">React</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="70"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Python</span>
-            <span class="progress-list__skill-value">90%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="80"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">C#</span>
-            <span class="progress-list__skill-value">80%</span>
+            <span class="progress-list__skill-title">AWS Infrastructure</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="80"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
       </div>
       <div class="col-md-5 mr-auto">
-        <div class="progress-list__skill">
+      <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">.Net</span>
-            <span class="progress-list__skill-value">80%</span>
+            <span class="progress-list__skill-title">Product Management</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="80"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">AWS</span>
-            <span class="progress-list__skill-value">60%</span>
+            <span class="progress-list__skill-title">Stakeholder Management</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="90"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">git</span>
-            <span class="progress-list__skill-value">90%</span>
+            <span class="progress-list__skill-title">Data Science & AI Pipelines</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="70"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">React & Redux</span>
-            <span class="progress-list__skill-value">80%</span>
+            <span class="progress-list__skill-title">Leadership & People Managament</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+          <div style={{paddingBottom: '20px'}}>
+            <ProgressBar
+                width="400px"
+                height="10px"
+                rect
+                fontColor="gray"
+                percentage="90"
+                rectPadding="1px"
+                rectBorderRadius="20px"
+                trackPathColor="#E9ECEF"
+                trackBorderColor="transparent"
+                defColor={{
+                  excellent: '#C0B283'
+                }}
+              />
+              </div>
         </div>
       </div>
     </div>

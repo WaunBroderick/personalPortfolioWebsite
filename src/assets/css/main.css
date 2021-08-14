@@ -4533,7 +4533,6 @@ tbody.collapse.show {
     height: 1rem;
     line-height: 1rem;
     color: #fff;
-    background-color: #007bff;
     transition: width .6s ease
 }
 
@@ -4626,7 +4625,6 @@ tbody.collapse.show {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #007bff;
     border-color: #007bff
 }
 
@@ -5569,7 +5567,7 @@ button.close {
 }
 
 .bg-primary {
-    background-color: #007bff!important
+    background-color: #ffffff!important
 }
 
 a.bg-primary:focus,

@@ -4533,7 +4533,6 @@ tbody.collapse.show {
     height: 1rem;
     line-height: 1rem;
     color: #fff;
-    background-color: #007bff;
     transition: width .6s ease
 }
 
