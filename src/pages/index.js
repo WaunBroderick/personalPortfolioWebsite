@@ -1,13 +1,16 @@
-import React from "react"
-import $ from "jquery"
+import React, { useState, useEffect } from "react"
+import ReactDOM from 'react-dom';
+
 
 import { Helmet } from "react-helmet"
-import { Link, withPrefix } from "gatsby"
+import { withPrefix } from "gatsby"
+import { Link } from 'gatsby-plugin-modal-routing'
 import { StaticImage } from "gatsby-plugin-image"
 
 // Style Imports
 import Typewriter from 'typewriter-effect';
-import Blink from 'react-blink-text';
+import { Button } from 'react-bootstrap';
+
 
 
 
@@ -18,15 +21,97 @@ import "../assets/css/monochrome.css"
 
 // JS Functions
 //import "../assets/js/jquery-2.2.4.min.js"
-import "../assets/js/menu"
+//import "../assets/js/menu"
 import * as menuJS from "../assets/js/menu.js"
-import MobileMenu from '../assets/js/mobile-menu'
+//import MobileMenu from '../assets/js/mobile-menu'
+import ProgressBar from 'react-animated-progress-bar';
+
+// Projects Area
+import ProjectCard from "../components/ProjectCard";
+import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
+import ReactModal from 'react-modal'
+
+
 
 // Images
 import profilePic from "../assets/img/profilePic.jpg"
 
+import projectPic from "../assets/img/img_project_1.png"
+
+ReactModal.setAppElement('#___gatsby')
+
+
+
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
+
+  //Passing information to Project Modal
+  const [isProjectTitle, setProjectTitle] = useState('')
+  const [isProjectDescr, setProjectDescr] = useState('null')
+  const [isProjectImg, setProjectImg] = useState('null')
+  const [isProjectLink, setProjectLink] = useState('null')
+
+  //Displaying selected projects
+  const [projectTypeAll, setProjectTypeAll] = useState(true)
+  const [projectTypeSoftware, setProjectTypeSoftware] = useState(false)
+  const [projectTypeData, setProjectTypeData] = useState(false)
+  const [projectTypePM, setProjectTypePM] = useState(false)
+
+  function handleModalOpen ({projTitle, projDescr}) {
+    setProjectTitle(projTitle)
+    setProjectDescr(projDescr)
+    setIsModalOpen(true)
+  }
+
+  function selectAllProjects() {
+    setProjectTypeAll(true)
+    setProjectTypeSoftware(true)
+    setProjectTypeData(true)
+    setProjectTypePM(true)
+  }
+
+  function selectSoftwareProjects() {
+    setProjectTypeAll(false)
+    setProjectTypeSoftware(true)
+    setProjectTypeData(false)
+    setProjectTypePM(false)
+  }
+
+  function selectDataProjects() {
+    setProjectTypeAll(false)
+    setProjectTypeSoftware(false)
+    setProjectTypeData(true)
+    setProjectTypePM(false)
+  }
+
+  function selectPMProjects() {
+    setProjectTypeAll(false)
+    setProjectTypeSoftware(false)
+    setProjectTypeData(false)
+    setProjectTypePM(true)
+  }
+
+  function handleModalClose() {
+    //console.log('handleModalOpen: ', event);
+    setIsModalOpen(false)
+    console.log(isModalOpen)
+  }
+
+  const modalStyle = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      maxHeight: '800px',
+      alignItems: 'centre'
+    },
+  };
+
+
   return (
     <>
   <Helmet>
@@ -39,7 +124,7 @@ export default function Home() {
   <link rel="stylesheet" href="assets/css/monochrome.css"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet"/>
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet"/>
-  <script src={withPrefix('./assets/js/jquery-2.2.4.min.js')} type="text/javascript" />
+
   
   </Helmet>
 
@@ -95,6 +180,7 @@ export default function Home() {
          <img src={profilePic} alt="avatar"/>
         </div>
         <div class="col-md-8">
+        
         <p class="personal-profile__name">Waun Broderick_</p>
         <p class="personal-profile__work">Founder, Developer, Diver</p>
         <div class="personal-profile__contacts">
@@ -121,10 +207,12 @@ export default function Home() {
     </div>
   </header>
 
+
   <section id="hello" class="container section">
     <div class="row">
       <div class="col-md-10">
       <div style={{ display: 'inline-block' }}>
+
         <h2 id="hello_header" class="section__title">
           <div><Typewriter
             options={{
@@ -237,9 +325,15 @@ export default function Home() {
       </div>
       <div class="col-md-5 mr-auto">
         <div class="progress-list__skill">
+
+
           <p>
             <span class="progress-list__skill-title">html5/CSS3</span>
-            <span class="progress-list__skill-value">80%</span>
+        
+            <span class="progress-list__skill-value">
+            
+            </span>
+
           </p>
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" >
@@ -326,127 +420,131 @@ export default function Home() {
   <section id="portfolio" class="container section">
     <div class="row">
       <div class="col-md-12">
-        <h2 id="portfolio_header" class="section__title">My projects_</h2>
+        <h2 id="portfolio_header" class="section__title">
+        <div><Typewriter
+            options={{
+              strings: ['My_Projects', 'Software_development', 'Product_Management', 'Data_Science'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+        </h2>
       </div>
     </div>
     <div class="row portfolio-menu">
       <div class="col-md-12">
         <nav>
           <ul>
-            <li><a href="" data-portfolio-target-tag="all">all</a></li>
-            <li><a href="" data-portfolio-target-tag="app-dev">Application Development</a></li>
-            <li><a href="" data-portfolio-target-tag="data-proj">Data Projects</a></li>
-            <li><a href="" data-portfolio-target-tag="software">Software</a></li>
+            <li><a onClick={selectAllProjects} data-portfolio-target-tag="all">all</a></li>
+            <li><a onClick={selectSoftwareProjects} data-portfolio-target-tag="software-development">Software Development</a></li>
+            <li><a onClick={selectDataProjects} data-portfolio-target-tag="data-proj">Data Science Projects</a></li>
+            <li><a onClick={selectPMProjects} data-portfolio-target-tag="product-managemtent">Product Management</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
-    <div class="portfolio-cards">
-    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag="software">
-    <div class="col-md-6 col-lg-5 project-card__img">
-      <img class="" src="assets/img/img_project_1_mono.png" alt="project-img"/>
-    </div>
-    <div class="col-md-6 col-lg-7 project-card__info">
-    <h3 class="project-card__title">INPROD - Intelligent Processor of Documents  </h3>
-    <p class="project-card__description">
-    INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need
-            to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch 
-            ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy.            
-    </p>
-    <p class="project-card__stack">Used Technology:</p>
-          <ul class="tags">
-            <li>python</li>
-            <li>OCR</li>
-            <li>NLP</li>
-            <li>numpy</li>
-            <li>OpenCV</li>
-            <li>NLTK</li>
-          </ul>
-          <a href="https://github.com/WaunBroderick/INPROD" target="_blank" class="project-card__link">Project Repo</a>
-    </div>
-    </div>
-    </div>
-
-    <div class="portfolio-cards">
-    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag="software">
-    <div class="col-md-6 col-lg-5 project-card__img">
-      <img class="" src="assets/img/img_project_1_mono.png" alt="project-img"/>
-    </div>
-    <div class="col-md-6 col-lg-7 project-card__info">
-    <h3 class="project-card__title">INPROD - Intelligent Processor of Documents  </h3>
-    <p class="project-card__description">
-    INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need
-            to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch 
-            ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy.            
-    </p>
-    <p class="project-card__stack">Used Technology:</p>
-          <ul class="tags">
-            <li>python</li>
-            <li>OCR</li>
-            <li>NLP</li>
-            <li>numpy</li>
-            <li>OpenCV</li>
-            <li>NLTK</li>
-          </ul>
-          <a href="https://github.com/WaunBroderick/INPROD" target="_blank" class="project-card__link">Project Repo</a>
-    </div>
-    </div>
-    </div>
+    <div id="portfolio">
 
 
-    <div class="portfolio-cards">
-    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag="software">
-    <div class="col-md-6 col-lg-5 project-card__img">
-      <img class="" src="assets/img/img_project_1_mono.png" alt="project-img"/>
-    </div>
-    <div class="col-md-6 col-lg-7 project-card__info">
-    <h3 class="project-card__title">INPROD - Intelligent Processor of Documents  </h3>
-    <p class="project-card__description">
-    INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need
-            to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch 
-            ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy.            
-    </p>
-    <p class="project-card__stack">Used Technology:</p>
-          <ul class="tags">
-            <li>python</li>
-            <li>OCR</li>
-            <li>NLP</li>
-            <li>numpy</li>
-            <li>OpenCV</li>
-            <li>NLTK</li>
-          </ul>
-          <a href="https://github.com/WaunBroderick/INPROD" target="_blank" class="project-card__link">Project Repo</a>
-    </div>
-    </div>
-    </div>
+          <ReactModal
+          isOpen={isModalOpen}
+          onRequestClose={handleModalClose}
+          contentLabel="Example Modal"
+          style={modalStyle}
+          >            
+            <div style={{ alignContent: 'center', alignItems: 'center'}}>
+                <button onClick={handleModalClose}>
+                  X
+                </button>
+            <p class="portfolio-modal__title" style={{textAlign: 'center'}}>INPROD, The Intelligent Processor of Documents</p>
 
 
-    <div class="portfolio-cards">
-    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag="software">
-    <div class="col-md-6 col-lg-5 project-card__img">
-      <img class="" src="assets/img/img_project_1_mono.png" alt="project-img"/>
+            <StaticImage src="../assets/img/img_project_1.png" alt=""/>
+
+
+            <p style={{maxWidth: '700px', maxHeight: '50%'}}>
+              {isProjectDescr}
+            </p>
+            <br/>
+            <br/>
+            <p  href={isProjectLink}>Project Repo</p>
+            </div>
+
+          </ReactModal>
+        
+
+        <div>
+        { (projectTypeAll || projectTypeSoftware) ?  (
+
+    <Link to="#projects" onClick={()=> handleModalOpen( {
+      projTitle:"INPROD", 
+      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      })}>
+    <div>
+    <ProjectCard 
+    title={"INRPOD"}
+    category={"software"}
+    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
+    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
+    image={"ABSOLUTE URL ADDRESS"}
+    imageAlt={"image of sample project"}
+    /></div>
+    </Link>
+        ) : ( <div></div>)}
+        </div>
+
+
+    <Link to="#projects" onClick={()=> handleModalOpen( {
+      projTitle:"Virutal Vow", 
+      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      })}>
+    <ProjectCard 
+    title={"Virtual Vow"}
+    category={"software"}
+    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
+    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
+    image={"ABSOLUTE URL ADDRESS"}
+    imageAlt={"image of sample project"}
+    />
+    </Link>
+
+
+    <Link to="#projects" onClick={()=> handleModalOpen( {
+      projTitle:"PCS4Kids", 
+      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      })}>
+    <ProjectCard 
+    title={"PCS4Kids"}
+    category={"software"}
+    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
+    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
+    image={"ABSOLUTE URL ADDRESS"}
+    imageAlt={"image of sample project"}
+    />
+    </Link>
+
+
+    <Link to="#projects" onClick={()=> handleModalOpen( {
+      projTitle:"Labnetic", 
+      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      })}>
+    <ProjectCard 
+    title={"Labnetic"}
+    category={"software"}
+    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
+    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
+    image={"ABSOLUTE URL ADDRESS"}
+    imageAlt={"image of sample project"}
+    />
+    </Link>
+
+
+
     </div>
-    <div class="col-md-6 col-lg-7 project-card__info">
-    <h3 class="project-card__title">INPROD - Intelligent Processor of Documents  </h3>
-    <p class="project-card__description">
-    INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need
-            to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch 
-            ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy.            
-    </p>
-    <p class="project-card__stack">Used Technology:</p>
-          <ul class="tags">
-            <li>python</li>
-            <li>OCR</li>
-            <li>NLP</li>
-            <li>numpy</li>
-            <li>OpenCV</li>
-            <li>NLTK</li>
-          </ul>
-          <a href="https://github.com/WaunBroderick/INPROD" target="_blank" class="project-card__link">Project Repo</a>
-    </div>
-    </div>
-    </div>
+
 
 <div class="modal fade portfolio-modal" id="portfolioModal_virtualvow" tabindex="-1" role="dialog" aria-hidden="true">
 <div class="modal-dialog modal-lg" role="document">
@@ -513,7 +611,5 @@ export default function Home() {
   <script src="../assets/js/style-switcher.js"></script>
 </body>
 
-
-  <div>Hello worlzds!</div>
   </>) 
 }
