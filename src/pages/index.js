@@ -36,6 +36,7 @@ import ReactModal from 'react-modal'
 // Images
 import profilePic from "../assets/img/profilePic.jpg"
 
+import mediumArticle1 from "../assets/img/mediumArticle1.jpg"
 import projectPic from "../assets/img/img_project_1.png"
 
 ReactModal.setAppElement('#___gatsby')
@@ -628,10 +629,55 @@ export default function Home() {
     imageAlt={"image of sample project"}
     />
     </Link>
+    </div>
 
 
+       <section id="blog" class="container section">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="blog_header" class="section__title">Blog Posts_</h2>
+      </div>
+    </div>
+
+    <div class="row post-cards">
+      <div class="col-md-4">
+        <a href="https://medium.com/@broderickwaun/create-your-own-computer-vision-sandbox-b7c6b8662151" target="_blank">
+          <div class="post-cards__card">
+            <div >
+            <StaticImage src="../assets/img/mediumArticle1.jpg" alt="" />
+            </div>
+            <div class="post-cards__info">
+              <p class="post-cards__date">FEB 2019</p>
+              <h3 class="post-cards_title">Create Your Own Computer Vision Sandbox</h3>
+              <p class="post-cards_description">From automated data collection to CNN model building, a beginner friendly CV skeleton guide.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="https://blog.usejournal.com/three-things-ive-learned-in-the-military-that-improve-my-startup-8a21f95139d0" target="_blank">
+          <div class="post-cards__card">
+            <div >
+            <StaticImage src="../assets/img/mediumArticle2.jpeg" alt="" />
+            </div>
+            <div class="post-cards__info">
+              <p class="post-cards__date">MAY 2020</p>
+              <h3 class="post-cards_title">Three Things I've Learned in the military that improve my startup</h3>
+              <p class="post-cards_description">building cohesion, belonging, and purpose for every employee in my startup. My experience in the CAF.</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
     </div>
+
+
+
+
+
+      </section>
+
 
 
 <div class="modal fade portfolio-modal" id="portfolioModal_virtualvow" tabindex="-1" role="dialog" aria-hidden="true">
@@ -675,6 +721,17 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    <section id="blog" class="container section">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="blog_header" class="section__title">Latest Posts_</h2>
+        <h2>HELLLO</h2>
+      </div>
+    </div>
+
+
+      </section>
 
 </div>
 
