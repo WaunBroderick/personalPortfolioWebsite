@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react"
 import ReactDOM from 'react-dom';
 
 
+
+import $ from 'jquery' 
+
+
 import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 import { Link } from 'gatsby-plugin-modal-routing'
@@ -11,7 +15,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import Typewriter from 'typewriter-effect';
 import particlesJS from 'particle.js'
 import { Scrollbar } from "react-scrollbars-custom";
-
 
 
 
@@ -42,6 +45,8 @@ ReactModal.setAppElement('#___gatsby')
 
 
 export default function Home() {
+
+
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
   const progressDiv = document.querySelector('.progressDiv')
@@ -131,7 +136,11 @@ export default function Home() {
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet"/>
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css"/>
-
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossOrigin="anonymous"
+  />
 
   
   </Helmet>
@@ -767,21 +776,7 @@ export default function Home() {
 
 
 
-  <script src="../assets/js/jquery-2.2.4.min.js"></script>
-  <script src="../assets/js/popper.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/menu.js"></script>
-  <script src={menuJS}></script>
-  <script src="../assets/js/jquery.waypoints.js"></script>
-  <script src="../assets/js/progress-list.js"></script>
-  <script src="../assets/js/section.js"></script>
-  <script src="../assets/js/portfolio-filter.js"></script>
-  <script src="../assets/js/slider-carousel.js"></script>
-  <script src="../assets/js/mobile-menu.js"></script>
-  <script src="../assets/js/contacts.js"></script>
-  <script src="../assets/js/mbclicker.min.js"></script>
-  <script src="../assets/js/site-btn.js"></script>
-  <script src="../assets/js/style-switcher.js"></script>
+
 </body>
 
   </>) 
