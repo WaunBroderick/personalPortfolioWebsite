@@ -23,9 +23,7 @@ import "../assets/css/main.css"
 import "../assets/css/color.css"
 import "../assets/css/monochrome.css"
 import { Button } from 'react-bootstrap';
-import * as menuJS from "../assets/js/menu.js"
-//import MobileMenu from '../assets/js/mobile-menu'
-import ProgressBar from 'react-animated-progress-bar';
+
 
 // Projects Area
 import ProjectCard from "../components/ProjectCard";
@@ -49,7 +47,6 @@ export default function Home() {
 
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
-  const progressDiv = document.querySelector('.progressDiv')
   
 
 
@@ -348,20 +345,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Javacript (ES6+)</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="70"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
 
         </div>
@@ -370,20 +354,7 @@ export default function Home() {
             <span class="progress-list__skill-title">React</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="70"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
         </div>
         <div class="progress-list__skill">
@@ -391,20 +362,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Python</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="80"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+           
               </div>
         </div>
         <div class="progress-list__skill">
@@ -412,20 +370,7 @@ export default function Home() {
             <span class="progress-list__skill-title">AWS Infrastructure</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="80"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
         </div>
       </div>
@@ -435,20 +380,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Product Management</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="80"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
         </div>
         <div class="progress-list__skill">
@@ -456,20 +388,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Stakeholder Management</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="90"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
         </div>
         <div class="progress-list__skill">
@@ -477,20 +396,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Data Science & AI Pipelines</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="70"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            
               </div>
         </div>
         <div class="progress-list__skill">
@@ -498,20 +404,7 @@ export default function Home() {
             <span class="progress-list__skill-title">Leadership & People Managament</span>
           </p>
           <div style={{paddingBottom: '20px'}}>
-            <ProgressBar
-                width="400px"
-                height="10px"
-                rect
-                fontColor="gray"
-                percentage="90"
-                rectPadding="1px"
-                rectBorderRadius="20px"
-                trackPathColor="#E9ECEF"
-                trackBorderColor="transparent"
-                defColor={{
-                  excellent: '#C0B283'
-                }}
-              />
+            <h1>bars here</h1>
               </div>
         </div>
       </div>
