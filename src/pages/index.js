@@ -130,7 +130,7 @@ export default function Home() {
     crossOrigin="anonymous"
   />
   </Helmet>
-  
+
   <ScrollMenu />
   
   
@@ -309,7 +309,12 @@ export default function Home() {
 
           <p>
             <span class="progress-list__skill-title">Javacript (ES6+)</span>
+            <span class="progress-list__skill-value">80%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -318,7 +323,12 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">React</span>
+            <span class="progress-list__skill-value">80%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -326,7 +336,12 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Python</span>
+            <span class="progress-list__skill-value">70%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "70%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
            
               </div>
@@ -334,7 +349,12 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">AWS Infrastructure</span>
+            <span class="progress-list__skill-value">60%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "60%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -344,7 +364,12 @@ export default function Home() {
       <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Product Management</span>
+            <span class="progress-list__skill-value">80%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -352,7 +377,12 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Stakeholder Management</span>
+            <span class="progress-list__skill-value">90%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -360,7 +390,12 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Data Science & AI Pipelines</span>
+            <span class="progress-list__skill-value">70%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "70%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -368,9 +403,13 @@ export default function Home() {
         <div class="progress-list__skill">
           <p>
             <span class="progress-list__skill-title">Leadership & People Managament</span>
+            <span class="progress-list__skill-value">80%</span>
           </p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
+            </div>
+          </div>
           <div style={{paddingBottom: '20px'}}>
-            <h1>bars here</h1>
               </div>
         </div>
       </div>
