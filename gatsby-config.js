@@ -6,6 +6,10 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata:{
+    title: "Waun Broderick's Portfolio Website",
+    description: ""
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

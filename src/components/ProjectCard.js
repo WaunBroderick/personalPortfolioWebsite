@@ -2,13 +2,21 @@ import ReactDOM from "react-dom";
 
 import React from 'react';
 
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+
+import { graphql } from "gatsby"
+
 
 
 //Project Images
-import projectPic from "../assets/img/img_project_1.png"
+import projectPic0 from "../assets/img/img_project_1.png"
+import projectPic1 from "../assets/img/img_project_2.png"
+import projectPic2 from "../assets/img/img_project_3.png"
+import projectPic3 from "../assets/img/img_project_pcs4kids.png"
 
 class ProjectCard extends React.Component {
+
+    
 
     constructor(props){
         super(props);
@@ -19,8 +27,9 @@ class ProjectCard extends React.Component {
             image: this.props.image,
             imageAlt: this.props.imageAlt
         };
-    }
 
+        
+    }
 
     render(){
 
@@ -29,8 +38,8 @@ class ProjectCard extends React.Component {
                 <div class="portfolio-cards">
                     <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag={this.state.technologies}>
                         <div class="col-md-6 col-lg-5 project-card__img">
-                            <StaticImage src={this.state.image} alt={this.state.imageAlt} />
-                            <GatsbyImage src={this.state.image} alt={this.state.imageAlt} />
+                            <StaticImage src={this.state.image} alt="" />
+                            <StaticImage src="http://localhost:8000/static/35f3a28f95aa64b4933301cae51d78cf/55788/img_project_2.webp" alt="" />
 
                         </div>
 

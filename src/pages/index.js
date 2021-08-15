@@ -552,7 +552,7 @@ export default function Home() {
                   <button style={{color:"grey", backgroundColor: 'white', border: '0px'}} onClick={handleModalClose}>
                     X
                   </button>
-                <p class="portfolio-modal__title" style={{textAlign: 'center'}}>INPROD, The Intelligent Processor of Documents</p>
+                <p class="portfolio-modal__title" style={{textAlign: 'center'}}>{isProjectTitle}</p>
 
                 <StaticImage src="../assets/img/img_project_1.png" alt=""/>
 
@@ -572,7 +572,7 @@ export default function Home() {
         { (projectTypeAll || projectTypeSoftware) ?  (
 
     <Link to="#projects" onClick={()=> handleModalOpen( {
-      projTitle:"INPROD", 
+      projTitle:"INPROD - Intelligent Processor of Documents", 
       projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such.",
       projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine"
       })}>
@@ -582,7 +582,7 @@ export default function Home() {
     category={"software"}
     description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
     technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"ABSOLUTE URL ADDRESS"}
+    image={"https://waunbroderick.me/assets/img/img_project_1_mono.png"}
     imageAlt={"image of sample project"}
     /></div>
     </Link>
@@ -590,50 +590,70 @@ export default function Home() {
         </div>
 
 
+        <div>
+        { (projectTypeAll || projectTypeSoftware) ?  (
+
     <Link to="#projects" onClick={()=> handleModalOpen( {
-      projTitle:"Virutal Vow", 
-      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      projTitle:"Virtual Vow", 
+      projDescr:"Virtual Vow begins with creating a user account that links up with your corresponding bank data. Using your bank data Virtual Vow is able to auto generate reccomendations for gift suggestions that you are interested in, and are within your price range. These recomendations are paired with several APIs to gather data for accurate pricing and understanding of these reccomendations so there is no further need to seek information to create these gift categories.You can then easily select the reccomendations that you like and have them linked with your account and now visible on your wedding registry dashboard. These gifts can then be accessed by other people you invite so they make make their own contributions, and you can track progress and know who to thank for what! Along with this the Bank is able to offer personalized deals and partnerships with companies to ensure that you get the very best rates, coverage, and rewards out of the gifts that you are collecting.Aside from all this Virtual vow also allows you to customize several outward faces pages with details about your wedding quickly and easily; RSVP status, wedding stories, venue addresses, photo albums, etc.",
+      projLink:"https://github.com/WaunBroderick/TheVirtualVow"
       })}>
+    <div>
     <ProjectCard 
     title={"Virtual Vow"}
     category={"software"}
-    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
-    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"ABSOLUTE URL ADDRESS"}
+    description={"Virtual Vow is a fully integrated wedding registry app that consolidates your guest outreach and confirmation, front facing information, alerts and updates, and most of all intelligent gift recommendations and tracking. Utilizing customer transaction data providing accurate suggestions, prices, and details as well as tracking contributions & money transfer."}
+    technologies={["Javascript", "Python", "Apache", "MySQL", "HTML/CSS"]}
+    image={'../assets/img/img_project_2.png'}
     imageAlt={"image of sample project"}
-    />
+    /></div>
     </Link>
+        ) : ( <div></div>)}
+        </div>
 
+
+        <div>
+        { (projectTypeAll || projectTypeData) ?  (
 
     <Link to="#projects" onClick={()=> handleModalOpen( {
-      projTitle:"PCS4Kids", 
-      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      projTitle:"Historica Canada", 
+      projDescr:"Worked closely with Historica Canada alongside a team of analysts,developers, and data scientists to help Historica Canada take their next leap of technological innovation and ensure that they are constantly able to use the tools and systems around them to interpret the stimulus of their campaigns and better mobilize their educational Canadian Content.This included data cleaning, data analysis, data visualization, business insights, project management, tool set-up, tool integration, and teaching.",
+      projLink:"https://www.historicacanada.ca/"
       })}>
+    <div>
     <ProjectCard 
-    title={"PCS4Kids"}
-    category={"software"}
-    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
-    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"ABSOLUTE URL ADDRESS"}
-    imageAlt={"image of sample project"}
-    />
+    title={"Historica Canada"}
+    category={"data"}
+    description={"istorica Canada is Canada's largest organization dedicated to enhancing awareness of Canadian history and citizenship. All of its programs are offered bilingually and reach more than eight million Canadians annually."}
+    technologies={["Python", "Data Anlysis", "Business Insights", "Marketing Analysis", "Financial Analysis"]}
+    image={"http://localhost:8000/static/profilePic-3298b0378e0cf68824394cecc8abac0b.jpg"}
+    imageAlt={`../assets/img/img_project_2.png`}
+    /></div>
     </Link>
+        ) : ( <div></div>)}
+        </div>
 
+        <div>
+        { (projectTypeAll || projectTypeSoftware) ?  (
 
     <Link to="#projects" onClick={()=> handleModalOpen( {
-      projTitle:"Labnetic", 
-      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      projTitle:"United Nations - PCS4Kids", 
+      projDescr:"PCS4Kids is a large initiative backed by the United Nations, residing under their Quality Education goals. PCS4Kids is a non-profit organization offering a unique mix of free educational software content through a children-friendly software interface developed by the PCS4Kids volunteers. This software container is then deployed on computers that are recycled from business terminals that are no longer needed, and shipped to community centres around the world where their presence could be a great benefit.",
+      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine"
       })}>
+    <div>
     <ProjectCard 
-    title={"Labnetic"}
+    title={"United Nations - PCS4Kids"}
     category={"software"}
-    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
-    technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"ABSOLUTE URL ADDRESS"}
+    description={"PCS4Kids is a large initiative backed by the United Nations, residing under their Quality Education goals. PCS4Kids is a non-profit organization offering a unique mix of free educational software content through a children-friendly software interface developed by the PCS4Kids volunteers. This software container is then deployed on computers that are recycled from business terminals that are no longer needed, and shipped to community centres around the world where their presence could be a great benefit."}
+    technologies={["Javascript", "PHP", "AdobePhotoshop", "HTML/CSS"]}
+    image={"http://localhost:8000/static/profilePic-3298b0378e0cf68824394cecc8abac0b.jpg"}
     imageAlt={"image of sample project"}
-    />
+    /></div>
     </Link>
- 
+        ) : ( <div></div>)}
+        </div>
+
 </Scrollbar>
 </div>
 
