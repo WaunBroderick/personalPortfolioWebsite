@@ -9,7 +9,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 // Style Imports
 import Typewriter from 'typewriter-effect';
-import { Button } from 'react-bootstrap';
+import particlesJS from 'particle.js'
+import { Scrollbar } from "react-scrollbars-custom";
 
 
 
@@ -18,10 +19,7 @@ import { Button } from 'react-bootstrap';
 import "../assets/css/main.css"
 import "../assets/css/color.css"
 import "../assets/css/monochrome.css"
-
-// JS Functions
-//import "../assets/js/jquery-2.2.4.min.js"
-//import "../assets/js/menu"
+import { Button } from 'react-bootstrap';
 import * as menuJS from "../assets/js/menu.js"
 //import MobileMenu from '../assets/js/mobile-menu'
 import ProgressBar from 'react-animated-progress-bar';
@@ -42,12 +40,11 @@ import projectPic from "../assets/img/img_project_1.png"
 ReactModal.setAppElement('#___gatsby')
 
 
-
-
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
   const progressDiv = document.querySelector('.progressDiv')
+  
 
 
   //Passing information to Project Modal
@@ -62,9 +59,10 @@ export default function Home() {
   const [projectTypeData, setProjectTypeData] = useState(false)
   const [projectTypePM, setProjectTypePM] = useState(false)
 
-  function handleModalOpen ({projTitle, projDescr}) {
+  function handleModalOpen ({projTitle, projDescr, projLink}) {
     setProjectTitle(projTitle)
     setProjectDescr(projDescr)
+    setProjectLink(projLink)
     setIsModalOpen(true)
   }
 
@@ -111,7 +109,8 @@ export default function Home() {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       maxHeight: '800px',
-      alignItems: 'centre'
+      alignItems: 'center',
+      alignContent: 'center'
     },
   };
 
@@ -187,7 +186,7 @@ export default function Home() {
         
         <p class="personal-profile__name">Waun Broderick_</p>
         <p class="personal-profile__work">Founder, Developer, Diver</p>
-        <div class="personal-profile__contacts">
+        <div class="personal-profile__contacts" >
             <dl class="contact-list contact-list__opacity-titles">
               <dt>Who:</dt>
               <dd>CTO{' & '}Cofounder</dd>
@@ -544,33 +543,33 @@ export default function Home() {
           contentLabel="Example Modal"
           style={modalStyle}
           >            
-            <div style={{ alignContent: 'center', alignItems: 'center'}}>
-                <button onClick={handleModalClose}>
-                  X
-                </button>
-            <p class="portfolio-modal__title" style={{textAlign: 'center'}}>INPROD, The Intelligent Processor of Documents</p>
+            <div style={{ alignContent: 'center', alignItems: 'center', maxWidth: '700px'}}>
+                  <button style={{backgroundColor: 'white', border: '0px'}} onClick={handleModalClose}>
+                    X
+                  </button>
+                <p class="portfolio-modal__title" style={{textAlign: 'center'}}>INPROD, The Intelligent Processor of Documents</p>
 
+                <StaticImage src="../assets/img/img_project_1.png" alt=""/>
 
-            <StaticImage src="../assets/img/img_project_1.png" alt=""/>
+                <p style={{ maxHeight: '50%', alignContent: 'center',textAlign: 'center' ,padding: 50}}>
+                  {isProjectDescr}
+                </p>
 
-
-            <p style={{maxWidth: '700px', maxHeight: '50%'}}>
-              {isProjectDescr}
-            </p>
-            <br/>
-            <br/>
-            <p  href={isProjectLink}>Project Repo</p>
+                <a style={{ marginTop: '50px'}} href={isProjectLink} target="_blank">Project Repo</a>
             </div>
 
           </ReactModal>
         
+          <Scrollbar style={{ height:"600px"}}>    
+         
 
         <div>
         { (projectTypeAll || projectTypeSoftware) ?  (
 
     <Link to="#projects" onClick={()=> handleModalOpen( {
       projTitle:"INPROD", 
-      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such."
+      projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such.",
+      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine"
       })}>
     <div>
     <ProjectCard 
@@ -629,7 +628,10 @@ export default function Home() {
     imageAlt={"image of sample project"}
     />
     </Link>
-    </div>
+ 
+</Scrollbar>
+</div>
+
 
 
        <section id="blog" class="container section">
