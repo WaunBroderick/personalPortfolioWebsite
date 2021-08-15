@@ -322,7 +322,7 @@ export default function Home() {
         </div>
         <div class="progress-list__skill">
           <p>
-            <span class="progress-list__skill-title">React</span>
+            <span class="progress-list__skill-title">ReactJS</span>
             <span class="progress-list__skill-value">80%</span>
           </p>
           <div class="progress">
