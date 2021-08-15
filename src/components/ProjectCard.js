@@ -7,13 +7,6 @@ import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 
-
-//Project Images
-import projectPic0 from "../assets/img/img_project_1.png"
-import projectPic1 from "../assets/img/img_project_2.png"
-import projectPic2 from "../assets/img/img_project_3.png"
-import projectPic3 from "../assets/img/img_project_pcs4kids.png"
-
 class ProjectCard extends React.Component {
 
 
@@ -38,8 +31,46 @@ class ProjectCard extends React.Component {
                 <div class="portfolio-cards">
                     <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag={this.state.technologies}>
                         <div class="col-md-6 col-lg-5 project-card__img">
-                            <StaticImage src="ok" alt="" />
-                            <StaticImage src="/static/52048d2fdf8e4c1a2aecf4de413c6f34/img_project_1.png" alt="" />
+                            
+                        { (this.state.image == "INPROD") ?  (
+                            <div>
+                                <StaticImage src="../assets/img/IMPROD_PROJ.png"/>
+                            </div>
+                        ):( 
+                            <div>     
+                            </div>
+                        )
+                        }
+
+                        { (this.state.image == "TD VOW") ?  (
+                            <div>
+                                <StaticImage src="../assets/img/TDVOW_PROJ.png"/>
+                            </div>
+                        ):( 
+                            <div>     
+                            </div>
+                        )
+                        }
+
+                        { (this.state.image == "HISTORICA CANADA") ?  (
+                            <div>
+                                <StaticImage src="../assets/img/HISTORICACANADA_PROJ.png"/>
+                            </div>
+                        ):( 
+                            <div>     
+                            </div>
+                        )
+                        }
+
+                        { (this.state.image == "PCS4KIDS") ?  (
+                            <div>
+                                <StaticImage src="../assets/img/PCS4KIDS_PROJ.png"/>
+                            </div>
+                        ):( 
+                            <div>     
+                            </div>
+                        )
+                        }
 
                         </div>
 

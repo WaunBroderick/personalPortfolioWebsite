@@ -53,6 +53,7 @@ export default function Home() {
   const [isProjectDescr, setProjectDescr] = useState('null')
   const [isProjectImg, setProjectImg] = useState('null')
   const [isProjectLink, setProjectLink] = useState('null')
+  const [isProjectImage, setProjectImage ] = useState('null')
 
   //Displaying selected projects
   const [projectTypeAll, setProjectTypeAll] = useState(true)
@@ -60,10 +61,11 @@ export default function Home() {
   const [projectTypeData, setProjectTypeData] = useState(false)
   const [projectTypePM, setProjectTypePM] = useState(false)
 
-  function handleModalOpen ({projTitle, projDescr, projLink}) {
+  function handleModalOpen ({projTitle, projDescr, projLink, projImg}) {
     setProjectTitle(projTitle)
     setProjectDescr(projDescr)
     setProjectLink(projLink)
+    setProjectImage(projImg)
     setIsModalOpen(true)
   }
 
@@ -553,8 +555,7 @@ export default function Home() {
                     X
                   </button>
                 <p class="portfolio-modal__title" style={{textAlign: 'center'}}>{isProjectTitle}</p>
-
-                <StaticImage src="../assets/img/img_project_1.png" alt=""/>
+                
 
                 <p style={{ maxHeight: '50%', alignContent: 'center',textAlign: 'center' ,padding: 50}}>
                   {isProjectDescr}
@@ -574,7 +575,8 @@ export default function Home() {
     <Link to="#projects" onClick={()=> handleModalOpen( {
       projTitle:"INPROD - Intelligent Processor of Documents", 
       projDescr:"For INPROD to truly be the flexible and robust tool that it sets out to be the first step can and must start with Optimization. By using OpenCV and a series of image processing libraires along with a multi-threaded queuing systems INPROD is able to find individual optimization parameters to helpensure the highest possible quality of data prior to its pipeline ingestion. Following thisthe text is operated on using a number of different text analysis methods depending on the need and variety of documents, everything from building complex models on samples or using RegEx to explore patterns within the document with a robust flexibility for how it does such.",
-      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine"
+      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine",
+      projImg:"INPROD"
       })}>
     <div>
     <ProjectCard 
@@ -582,7 +584,7 @@ export default function Home() {
     category={"software"}
     description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
     technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"/static/52048d2fdf8e4c1a2aecf4de413c6f34/img_project_1.png"}
+    image={"INPROD"}
     imageAlt={"image of sample project"}
     /></div>
     </Link>
@@ -596,7 +598,8 @@ export default function Home() {
     <Link to="#projects" onClick={()=> handleModalOpen( {
       projTitle:"Virtual Vow", 
       projDescr:"Virtual Vow begins with creating a user account that links up with your corresponding bank data. Using your bank data Virtual Vow is able to auto generate reccomendations for gift suggestions that you are interested in, and are within your price range. These recomendations are paired with several APIs to gather data for accurate pricing and understanding of these reccomendations so there is no further need to seek information to create these gift categories.You can then easily select the reccomendations that you like and have them linked with your account and now visible on your wedding registry dashboard. These gifts can then be accessed by other people you invite so they make make their own contributions, and you can track progress and know who to thank for what! Along with this the Bank is able to offer personalized deals and partnerships with companies to ensure that you get the very best rates, coverage, and rewards out of the gifts that you are collecting.Aside from all this Virtual vow also allows you to customize several outward faces pages with details about your wedding quickly and easily; RSVP status, wedding stories, venue addresses, photo albums, etc.",
-      projLink:"https://github.com/WaunBroderick/TheVirtualVow"
+      projLink:"https://github.com/WaunBroderick/TheVirtualVow",
+      projImg:"VIRTUAL VOW"
       })}>
     <div>
     <ProjectCard 
@@ -604,7 +607,7 @@ export default function Home() {
     category={"software"}
     description={"Virtual Vow is a fully integrated wedding registry app that consolidates your guest outreach and confirmation, front facing information, alerts and updates, and most of all intelligent gift recommendations and tracking. Utilizing customer transaction data providing accurate suggestions, prices, and details as well as tracking contributions & money transfer."}
     technologies={["Javascript", "Python", "Apache", "MySQL", "HTML/CSS"]}
-    image={'../assets/img/img_project_2.png'}
+    image={"TD VOW"}
     imageAlt={"image of sample project"}
     /></div>
     </Link>
@@ -618,7 +621,8 @@ export default function Home() {
     <Link to="#projects" onClick={()=> handleModalOpen( {
       projTitle:"Historica Canada", 
       projDescr:"Worked closely with Historica Canada alongside a team of analysts,developers, and data scientists to help Historica Canada take their next leap of technological innovation and ensure that they are constantly able to use the tools and systems around them to interpret the stimulus of their campaigns and better mobilize their educational Canadian Content.This included data cleaning, data analysis, data visualization, business insights, project management, tool set-up, tool integration, and teaching.",
-      projLink:"https://www.historicacanada.ca/"
+      projLink:"https://www.historicacanada.ca/",
+      projImg:"HISTORICA CANADA"
       })}>
     <div>
     <ProjectCard 
@@ -626,7 +630,7 @@ export default function Home() {
     category={"data"}
     description={"istorica Canada is Canada's largest organization dedicated to enhancing awareness of Canadian history and citizenship. All of its programs are offered bilingually and reach more than eight million Canadians annually."}
     technologies={["Python", "Data Anlysis", "Business Insights", "Marketing Analysis", "Financial Analysis"]}
-    image={"http://localhost:8000/static/profilePic-3298b0378e0cf68824394cecc8abac0b.jpg"}
+    image={"HISTORICA CANADA"}
     imageAlt={`../assets/img/img_project_2.png`}
     /></div>
     </Link>
@@ -639,7 +643,8 @@ export default function Home() {
     <Link to="#projects" onClick={()=> handleModalOpen( {
       projTitle:"United Nations - PCS4Kids", 
       projDescr:"PCS4Kids is a large initiative backed by the United Nations, residing under their Quality Education goals. PCS4Kids is a non-profit organization offering a unique mix of free educational software content through a children-friendly software interface developed by the PCS4Kids volunteers. This software container is then deployed on computers that are recycled from business terminals that are no longer needed, and shipped to community centres around the world where their presence could be a great benefit.",
-      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine"
+      projLink:"https://github.com/WaunBroderick/Batch-OCR-Engine",
+      projImg:"PCS4KIDS"
       })}>
     <div>
     <ProjectCard 
@@ -647,7 +652,7 @@ export default function Home() {
     category={"software"}
     description={"PCS4Kids is a large initiative backed by the United Nations, residing under their Quality Education goals. PCS4Kids is a non-profit organization offering a unique mix of free educational software content through a children-friendly software interface developed by the PCS4Kids volunteers. This software container is then deployed on computers that are recycled from business terminals that are no longer needed, and shipped to community centres around the world where their presence could be a great benefit."}
     technologies={["Javascript", "PHP", "AdobePhotoshop", "HTML/CSS"]}
-    image={"http://localhost:8000/static/profilePic-3298b0378e0cf68824394cecc8abac0b.jpg"}
+    image={"PCS4KIDS"}
     imageAlt={"image of sample project"}
     /></div>
     </Link>
