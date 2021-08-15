@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "@agility/gatsby-source-agilitycms": "^3.0.1",
+    "devicon": "^2.13.0",
+    "devicon-react-svg": "^0.2.3",
+    "devicons": "^1.8.0",
     "disqus-react": "^1.0.11",
     "gatsby": "^3.5.0",
     "gatsby-link": "^3.5.0",

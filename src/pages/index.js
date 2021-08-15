@@ -36,6 +36,7 @@ import profilePic from "../assets/img/profilePic.jpg"
 
 import mediumArticle1 from "../assets/img/mediumArticle1.jpg"
 import projectPic from "../assets/img/img_project_1.png"
+import DevIcon from "devicon-react-svg";
 
 ReactModal.setAppElement('#___gatsby')
 
@@ -127,6 +128,8 @@ export default function Home() {
   <link rel="stylesheet" href="assets/css/monochrome.css"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet"/>
   <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css"/>
+
 
   
   </Helmet>
@@ -542,9 +545,11 @@ export default function Home() {
           onRequestClose={handleModalClose}
           contentLabel="Example Modal"
           style={modalStyle}
-          >            
+          >    
+
             <div style={{ alignContent: 'center', alignItems: 'center', maxWidth: '700px'}}>
-                  <button style={{backgroundColor: 'white', border: '0px'}} onClick={handleModalClose}>
+             
+                  <button style={{color:"grey", backgroundColor: 'white', border: '0px'}} onClick={handleModalClose}>
                     X
                   </button>
                 <p class="portfolio-modal__title" style={{textAlign: 'center'}}>INPROD, The Intelligent Processor of Documents</p>
@@ -640,7 +645,7 @@ export default function Home() {
       <h2 id="resume_header" class="section__title">
     <div><Typewriter
             options={{
-              strings: ['Blog_Posts'],
+              strings: ['Blog_Posts', 'Panels', 'Open_Discussions'],
               autoStart: true,
               loop: true,
               cursor: '_',
@@ -686,69 +691,55 @@ export default function Home() {
 
 
 
-
-
       </section>
 
 
 
-<div class="modal fade portfolio-modal" id="portfolioModal_virtualvow" tabindex="-1" role="dialog" aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body col-md-11 col-lg-9 ml-auto mr-auto">
-        <p class="portfolio-modal__title">Virtual Vow - The Intelligent Wedding Registry</p>
-        <img class="portfolio-modal__img" src="assets/img/img_project_2_mono.png" alt="modal_img"/>
-        <p class="portfolio-modal__description">
-         soon....
-        </p>
-        </div>
-      </div>
-    </div>
 
-    <div id="testimonials" class="section">
-    <div class="background slider-carousel" >
-      <div class="container">
-        <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselTestimonials" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselTestimonials" data-slide-to="1"></li>
-            <li data-target="#carouselTestimonials" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-10 col-sm-10 col-10 mr-auto ml-auto">
-                  <p class="slider-carousel__title">How do you relax?</p>
-                  <p class="slider-carousel_caption">2018 Book List</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section id="blog" class="container section">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 id="blog_header" class="section__title">Latest Posts_</h2>
-        <h2>HELLLO</h2>
-      </div>
-    </div>
-
-
-      </section>
-
-</div>
 
 
   </section>
+
+  <div class="background" style={{backgroundImage: "../assets/img/img_bg_main.jpg"}}>
+    <div id="contact" class="container section">
+      <div class="row">
+        <div class="col-md-12">
+        <h2 id="hello_header" class="section__title">
+          <div><Typewriter
+            options={{
+              strings: ['Built_With', 'Tech_Used'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+        </h2>
+        </div>
+      </div>
+      <div class="row" style={{alignItems: "center", alignSelf: 'center', textAlign: "center", alignContent: "center", display: "inline-block"}}>
+      <div class="row" style={{alignItems: "center", alignSelf: 'center', textAlign: "center", alignContent: "center"}}>
+        <div  title="Gatsby.JS" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-gatsby-plain colored"></div>
+        <div  title="Ract.JS" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-react-original colored"></div>
+        <div  title="Graphql" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-graphql-plain colored"></div>
+        <div  title="VSCode" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-vscode-plain colored"></div>
+        <div  title="GitHub" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-github-original colored"></div>
+        <div  title="Amazon Web Services" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-amazonwebservices-original colored"></div>
+        <div  title="Docker" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-docker-plain colored"></div>
+        <div  title="Git" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-git-plain colored"></div>
+        <div  title="npm" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-npm-original-wordmark colored"></div>
+        <div  title="Sass" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-sass-original colored"></div>
+        <div  title="Ubuntu" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-ubuntu-plain colored"></div>
+        <div  title="Figma" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-figma-plain colored"></div>
+        <div  title="Codepen" style={{fontSize: "5rem", fontColor: '#fffff', opacity: "0.7", margin: "5px"}} class="devicon-codepen-plain"></div>
+      </div>
+
+
+        </div>
+    </div>
+
+    </div>
+
 
 
   <script src="../assets/js/jquery-2.2.4.min.js"></script>
