@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@agility/gatsby-source-agilitycms": "^3.0.1",
+    "bootstrap": "^5.0.2",
     "browserify-zlib": "^0.2.0",
     "devicon": "^2.13.0",
     "devicon-react-svg": "^0.2.3",
@@ -36,7 +37,7 @@
     "react": "^17.0.1",
     "react-animated-progress-bar": "^1.0.4",
     "react-blink-text": "^1.0.5",
-    "react-bootstrap": "^1.6.1",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-modal": "^3.14.3",

@@ -1,10 +1,6 @@
-import ReactDOM from "react-dom";
-
 import React from 'react';
 
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
-
-import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 class ProjectCard extends React.Component {

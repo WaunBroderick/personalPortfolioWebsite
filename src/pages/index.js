@@ -1,33 +1,28 @@
-import React, { useState, useEffect } from "react"
-import ReactDOM from 'react-dom';
-
-
-
-import $ from 'jquery' 
+import React, { useState } from "react"
+import ReactDOM from "react-dom";
 
 
 import { Helmet } from "react-helmet"
-import { withPrefix } from "gatsby"
 import { Link } from 'gatsby-plugin-modal-routing'
 import { StaticImage } from "gatsby-plugin-image"
 
 // Style Imports
 import Typewriter from 'typewriter-effect';
-import particlesJS from 'particle.js'
 import { Scrollbar } from "react-scrollbars-custom";
+import { Navbar } from 'react-bootstrap'
 
+//Menu
+import ScrollMenu from '../components/ScrollMenu'
 
 
 // CSS styling
 import "../assets/css/main.css"
 import "../assets/css/color.css"
 import "../assets/css/monochrome.css"
-import { Button } from 'react-bootstrap';
 
 
 // Projects Area
 import ProjectCard from "../components/ProjectCard";
-import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
 import ReactModal from 'react-modal'
 
 
@@ -35,9 +30,6 @@ import ReactModal from 'react-modal'
 // Images
 import profilePic from "../assets/img/profilePic.jpg"
 
-import mediumArticle1 from "../assets/img/mediumArticle1.jpg"
-import projectPic from "../assets/img/img_project_1.png"
-import DevIcon from "devicon-react-svg";
 
 ReactModal.setAppElement('#___gatsby')
 
@@ -53,7 +45,6 @@ export default function Home() {
   //Passing information to Project Modal
   const [isProjectTitle, setProjectTitle] = useState('')
   const [isProjectDescr, setProjectDescr] = useState('null')
-  const [isProjectImg, setProjectImg] = useState('null')
   const [isProjectLink, setProjectLink] = useState('null')
   const [isProjectImage, setProjectImage ] = useState('null')
 
@@ -138,36 +129,11 @@ export default function Home() {
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossOrigin="anonymous"
   />
-
-  
   </Helmet>
-
-  <div class="menu">
-    <div class="container">
-      <div class="row">
-        <div class="menu__wrapper d-none d-lg-block col-md-12">
-          <nav class="">
-            <ul>
-              <li><a href="#hello">Hello</a></li>
-              <li><a href="#resume">Resume</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#testimonials">Whats Up?</a></li>
-              <li><a href="#blog">blog</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        
-        <div class="menu__wrapper col-md-12 d-lg-none">
-          <button type="button" class="menu__mobile-button">
-            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
+  
+  <ScrollMenu />
+  
+  
 
   <div class="mobile-menu d-lg-none">
     <div class="container">
@@ -210,11 +176,11 @@ export default function Home() {
             </dl>
           </div>
           <p class="personal-profile__social">
-            <a href="https://github.com/WaunBroderick" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/waunbroderick/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-            <a href="https://www.facebook.com/waun.broderick" target="_blank"><i class="fa fa-facebook-square"></i></a>
-            <a href="https://medium.com/@broderickwaun" target="_blank"><i class="fa fa-medium"></i></a>
-            <a href="https://www.instagram.com/broderickwaun/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com/WaunBroderick" target="_blank" rel="noreferrer"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/waunbroderick/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin-square"></i></a>
+            <a href="https://www.facebook.com/waun.broderick" target="_blank" rel="noreferrer"><i class="fa fa-facebook-square"></i></a>
+            <a href="https://medium.com/@broderickwaun" target="_blank" rel="noreferrer"><i class="fa fa-medium"></i></a>
+            <a href="https://www.instagram.com/broderickwaun/" target="_blank" rel="noreferrer"><i class="fa fa-instagram"></i></a>
           </p>
         </div>
       </div>
@@ -240,13 +206,13 @@ export default function Home() {
         </h2>
         </div>
         <p class="section__description">
-          HSBc Computer Science graduate '18 <a href="https://www.trentu.ca/" target="_blank">@TrentU</a>, currently pursuing 
+          HSBc Computer Science graduate '18 <a href="https://www.trentu.ca/" target="_blank" rel="noreferrer">@TrentU</a>, currently pursuing 
             opportunities and expertise in Full Stack Data Application Development at TD Bank Toronto.
             Former Canadian Armed Force Infantry soldier, who still believes in the importance of community and comradery as well as the endless capability of work ethic when paired 
           with passion.
           <br/>
           <br/>
-          Outside of work you can find me practicing my passion for art <a href="https://academyofrealistart.com/" target="_blank">@ARA</a>, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
+          Outside of work you can find me practicing my passion for art <a href="https://academyofrealistart.com/" target="_blank" rel="noreferrer">@ARA</a>, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
           series of organizations and groups in my community.
         </p>
         <a href="../assets/resume/Resume_-_Waun_Broderick_optimize.pdf" class="section_btn site-btn"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
@@ -463,7 +429,7 @@ export default function Home() {
                   {isProjectDescr}
                 </p>
 
-                <a style={{ marginTop: '50px'}} href={isProjectLink} target="_blank">Project Repo</a>
+                <a style={{ marginTop: '50px'}} href={isProjectLink} target="_blank" rel="noreferrer">Project Repo</a>
             </div>
 
           </ReactModal>
@@ -585,7 +551,7 @@ export default function Home() {
 
     <div class="row post-cards">
       <div class="col-md-4">
-        <a href="https://medium.com/@broderickwaun/create-your-own-computer-vision-sandbox-b7c6b8662151" target="_blank">
+        <a href="https://medium.com/@broderickwaun/create-your-own-computer-vision-sandbox-b7c6b8662151" target="_blank" rel="noreferrer">
           <div class="post-cards__card">
             <div >
             <StaticImage src="../assets/img/mediumArticle1.jpg" alt="" />
@@ -600,7 +566,7 @@ export default function Home() {
       </div>
 
       <div class="col-md-4">
-        <a href="https://blog.usejournal.com/three-things-ive-learned-in-the-military-that-improve-my-startup-8a21f95139d0" target="_blank">
+        <a href="https://blog.usejournal.com/three-things-ive-learned-in-the-military-that-improve-my-startup-8a21f95139d0" target="_blank" rel="noreferrer">
           <div class="post-cards__card">
             <div >
             <StaticImage src="../assets/img/mediumArticle2.jpeg" alt="" />
