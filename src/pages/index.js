@@ -239,7 +239,7 @@ export default function Home() {
           Outside of work you can find me practicing my passion for art <a href="https://academyofrealistart.com/" target="_blank">@ARA</a>, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
           series of organizations and groups in my community.
         </p>
-        <a href="assets/resume/Resume_-_Waun_Broderick_optimize.pdf"><StaticImage src="img_btn_icon.png"/>Download CV</a>
+        <a href="../assets/resume/Resume_-_Waun_Broderick_optimize.pdf" class="section_btn site-btn"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
       </div>
     </div>
   </section>
@@ -635,7 +635,17 @@ export default function Home() {
        <section id="blog" class="container section">
     <div class="row">
       <div class="col-md-12">
-        <h2 id="blog_header" class="section__title">Blog Posts_</h2>
+      <h2 id="resume_header" class="section__title">
+    <div><Typewriter
+            options={{
+              strings: ['Blog_Posts'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+    </h2>
       </div>
     </div>
 
