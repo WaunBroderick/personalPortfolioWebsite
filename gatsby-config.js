@@ -15,6 +15,13 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/img`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
         // A selector to set react-modal's app root to, default is `#___gatsby`

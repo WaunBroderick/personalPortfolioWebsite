@@ -582,7 +582,7 @@ export default function Home() {
     category={"software"}
     description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
     technologies={["Python", "NLTK", "Keras", "Tensorflow"]}
-    image={"https://waunbroderick.me/assets/img/img_project_1_mono.png"}
+    image={"/static/52048d2fdf8e4c1a2aecf4de413c6f34/img_project_1.png"}
     imageAlt={"image of sample project"}
     /></div>
     </Link>

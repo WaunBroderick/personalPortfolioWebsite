@@ -16,7 +16,6 @@ import projectPic3 from "../assets/img/img_project_pcs4kids.png"
 
 class ProjectCard extends React.Component {
 
-    
 
     constructor(props){
         super(props);
@@ -26,10 +25,11 @@ class ProjectCard extends React.Component {
             technologies: this.props.technologies,
             image: this.props.image,
             imageAlt: this.props.imageAlt
+        
+        
         };
 
-        
-    }
+    };
 
     render(){
 
@@ -38,8 +38,8 @@ class ProjectCard extends React.Component {
                 <div class="portfolio-cards">
                     <div class="row project-card" data-toggle="modal" data-target="#portfolioModal_inprod" data-portfolio-tag={this.state.technologies}>
                         <div class="col-md-6 col-lg-5 project-card__img">
-                            <StaticImage src={this.state.image} alt="" />
-                            <StaticImage src="http://localhost:8000/static/35f3a28f95aa64b4933301cae51d78cf/55788/img_project_2.webp" alt="" />
+                            <StaticImage src="ok" alt="" />
+                            <StaticImage src="/static/52048d2fdf8e4c1a2aecf4de413c6f34/img_project_1.png" alt="" />
 
                         </div>
 
