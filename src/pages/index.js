@@ -264,10 +264,31 @@ export default function Home() {
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">employment</h3>
         <div class="resume-list__block">
+          <p class="resume-list__block-title">Gyroscopic Inc</p>
+          <p class="resume-list__block-date">JUL 2019 - PRESENT</p>
+          <p>
+            Co-Founder, CTO
+          </p>
+        </div>
+        <div class="resume-list__block">
+          <p class="resume-list__block-title">Canadian Armed Forces</p>
+          <p class="resume-list__block-date">FEB 2011 - PRESENT</p>
+          <p>
+            Infantry, RCN Diver
+          </p>
+        </div>
+        <div class="resume-list__block">
+          <p class="resume-list__block-title">Department of National Defence</p>
+          <p class="resume-list__block-date">MAY 2019 - MAY 2020</p>
+          <p>
+            Data Science/AI Team, Lead Solutions Developers
+          </p>
+        </div>
+        <div class="resume-list__block">
           <p class="resume-list__block-title">TD Bank</p>
           <p class="resume-list__block-date">JUL 2018 - present</p>
           <p>
-            Full Stack Developer
+            Data Science Full Stack Developer 
           </p>
         </div>
         <div class="resume-list__block">
@@ -289,13 +310,6 @@ export default function Home() {
           <p class="resume-list__block-date">MAY 2017 - AUG 2017</p>
           <p>
             Big Data Intern & Android Developer
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Canadian Armed Forces</p>
-          <p class="resume-list__block-date">FEB 2011 - AUG 2017</p>
-          <p>
-            Infantry Corporal
           </p>
         </div>
       </div>
