@@ -207,16 +207,16 @@ export default function Home() {
         </h2>
         </div>
         <p class="section__description">
-          HSBc Computer Science graduate '18 <a href="https://www.trentu.ca/" target="_blank" rel="noreferrer">@TrentU</a>, currently pursuing 
-            opportunities and expertise in Full Stack Data Application Development at TD Bank Toronto.
-            Former Canadian Armed Force Infantry soldier, who still believes in the importance of community and comradery as well as the endless capability of work ethic when paired 
+            A passionate Full-Stack developer and Artificial Intelligence enthusiast, currently pursuing expertise in technology
+            and product development as the CTO, and CoFounder of Gyroscopic Inc. 
+            Currently serving Canadian Armed Force RCN Diver, who believes in the importance of community and comradery as well as the endless capability of work ethic when paired 
           with passion.
           <br/>
           <br/>
-          Outside of work you can find me practicing my passion for art <a href="https://academyofrealistart.com/" target="_blank" rel="noreferrer">@ARA</a>, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
+          Outside of work you can find me practicing my passion for art <a href="https://www.instagram.com/waun.ink/" target="_blank" rel="noreferrer">@Waun.Ink</a>, Diving with the Canadian Armed Forces: Royal Canadian Navy, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
           series of organizations and groups in my community.
         </p>
-        <a href={resumeDownload} class="section_btn site-btn"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
+        <a href={resumeDownload} class="section_btn site-btn" target="_blank" rel="noreferrer"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
       </div>
     </div>
   </section>
