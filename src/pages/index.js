@@ -25,7 +25,8 @@ import "../assets/css/monochrome.css"
 import ProjectCard from "../components/ProjectCard";
 import ReactModal from 'react-modal'
 
-
+//Downloads
+import resumeDownload from '../assets/resume/Resume_-_Waun_Broderick_optimize.pdf'
 
 // Images
 import profilePic from "../assets/img/profilePic.jpg"
@@ -215,7 +216,7 @@ export default function Home() {
           Outside of work you can find me practicing my passion for art <a href="https://academyofrealistart.com/" target="_blank" rel="noreferrer">@ARA</a>, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
           series of organizations and groups in my community.
         </p>
-        <a href="../assets/resume/Resume_-_Waun_Broderick_optimize.pdf" class="section_btn site-btn"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
+        <a href={resumeDownload} class="section_btn site-btn"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/>Download CV</a>
       </div>
     </div>
   </section>
