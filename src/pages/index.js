@@ -216,7 +216,7 @@ export default function Home() {
           Outside of work you can find me practicing my passion for art <a href="https://www.instagram.com/waun.ink/" target="_blank" rel="noreferrer">@Waun.Ink</a>, Diving with the Canadian Armed Forces: Royal Canadian Navy, in the gym when I can't be on the hills snowboarding, hiking, or rockclimbing, or volunteering with a 
           series of organizations and groups in my community.
         </p>
-        <a href={resumeDownload} class="section_btn site-btn" target="_blank" rel="noreferrer"><StaticImage style={{marginTop: 5}} src="../assets/img/img_btn_icon.png"/><span style={{marginBottom: 5}}>Download CV</span></a>
+        <a href={resumeDownload} class="section_btn site-btn" target="_blank" rel="noreferrer"><StaticImage src="../assets/img/img_btn_icon.png"/><span style={{marginBottom: 5}}>Download CV</span></a>
       </div>
     </div>
   </section>
