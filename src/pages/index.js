@@ -97,6 +97,8 @@ export default function Home() {
     console.log(isModalOpen)
   }
 
+  const [isShownJob1, setIsShownJob1] = useState(false);
+
   const modalStyle = {
     content: {
       top: '50%',
@@ -264,11 +266,23 @@ export default function Home() {
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">employment</h3>
         <div class="resume-list__block">
+          <div id="mouseOverArea" 
+          onMouseEnter={()=> setIsShownJob1(true)}
+          onMouseLeave={()=> setIsShownJob1(false)}
+          >
           <p class="resume-list__block-title">Gyroscopic Inc</p>
           <p class="resume-list__block-date">JUL 2019 - PRESENT</p>
           <p>
             Co-Founder, CTO
           </p>
+          </div>
+          {isShownJob1 && (
+            <div>
+              <p>
+                -TBD
+              </p>
+            </div>
+          )}
         </div>
         <div class="resume-list__block">
           <p class="resume-list__block-title">Canadian Armed Forces</p>
