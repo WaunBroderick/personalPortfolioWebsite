@@ -31,6 +31,7 @@
     "gatsby-react-router-scroll": "^4.5.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-sharp": "^2.12.1",
+    "immutability-helper": "^3.1.1",
     "jquery": "^3.6.0",
     "jsdom": "^17.0.0",
     "particle.js": "^1.0.7",

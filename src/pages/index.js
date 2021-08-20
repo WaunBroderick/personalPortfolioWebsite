@@ -246,94 +246,30 @@ export default function Home() {
         </p>
     </div>
   </div>
-  <div class="row">
-      <div class="col-md-8 section__resume resume-list">
-        <h3 class="resume-list_title">education</h3>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Trent University</p>
-          <p class="resume-list__block-date">2013 - 2018</p>
-          <p>
-            H.BSc Computer Science
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Free Code Camp</p>
-          <p class="resume-list__block-date">2014 - 2018</p>
-          <p>
-            Full Stack Development Certification
-          </p>
-        </div>
-      </div>
-    </div>
+
+<TimelineList 
+title={"Education"}
+listData = {[
+  {jobName: "Trent University", jobDuration:"2013 - 2018", jobRole : "H.BSc Computer Science", visible: false, details: []},
+  {jobName: "Free Code Camp", jobDuration:"2014 - 2018", jobRole : "Full Stack Development Certification", visible: false, details: []},
+]}
+/>
+
+<TimelineList 
+title={"Employment"}
+listData = {[
+  {jobName: "Gyroscopic Inc", jobDuration:"JUL 2019 - PRESENT", jobRole : "Co-Founder, CTO", visible: false, details: []},
+  {jobName: "Canadian Armed Forces", jobDuration:"FEB 2011 - PRESENT", jobRole : "Infantry, RCN Diver", visible: false, details: []},
+  {jobName: "Department of National Defence", jobDuration:"MAY 2019 - MAY 2020", jobRole : "Data Science/AI Team, Lead Solutions Developer", visible: false, details: []},
+  {jobName: "TD BANK HQ", jobDuration:"JUL 2018 - MAY 2019", jobRole : "H.BSc Computer Science", visible: false, details: []},
+  {jobName: "United Nations", jobDuration:"FEB 2017 - AUG 2017", jobRole : "Front-End Developer", visible: false, details: []},
+  {jobName: "Trent University", jobDuration:"SEP 2016 - MAY 2018", jobRole : "Academic Assistant", visible: false, details: []},
+  {jobName: "TD Technology Waterloo", jobDuration:"MAY 2017 - AUG 2017", jobRole : "Big Data Intern & Android Developer", visible: false, details: []},
+]}
+/>
 
 
-
-    <div class="row">
-      <div class="col-md-8 section__resume resume-list">
-        <h3 class="resume-list_title">employment</h3>
-        <div class="resume-list__block">
-          <div id="mouseOverArea" 
-          onMouseEnter={()=> setIsShownJob1(true)}
-          onMouseLeave={()=> setIsShownJob1(false)}
-          >
-          <p class="resume-list__block-title">Gyroscopic Inc</p>
-          <p class="resume-list__block-date">JUL 2019 - PRESENT</p>
-          <p>
-            Co-Founder, CTO
-          </p>
-          </div>
-          {isShownJob1 && (
-            <div>
-              <p>
-                -TBD
-              </p>
-            </div>
-          )}
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Canadian Armed Forces</p>
-          <p class="resume-list__block-date">FEB 2011 - PRESENT</p>
-          <p>
-            Infantry, RCN Diver
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Department of National Defence</p>
-          <p class="resume-list__block-date">MAY 2019 - MAY 2020</p>
-          <p>
-            Data Science/AI Team, Lead Solutions Developers
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">TD Bank</p>
-          <p class="resume-list__block-date">JUL 2018 - present</p>
-          <p>
-            Data Science Full Stack Developer 
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">United Nations</p>
-          <p class="resume-list__block-date">FEB 2017 - AUG 2017</p>
-          <p>
-            Front-End Developer
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">Trent University</p>
-          <p class="resume-list__block-date">SEP 2016 - MAY 2018</p>
-          <p>
-            Academic Assistant
-          </p>
-        </div>
-        <div class="resume-list__block">
-          <p class="resume-list__block-title">TD Technology</p>
-          <p class="resume-list__block-date">MAY 2017 - AUG 2017</p>
-          <p>
-            Big Data Intern & Android Developer
-          </p>
-        </div>
-      </div>
-    </div>
+    
     <div class="row section__resume progress-list js-progress-list">
       <div class="col-md-12">
         <h3 class="progress-list__title">general skills</h3>
