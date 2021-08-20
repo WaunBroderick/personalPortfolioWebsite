@@ -14,6 +14,9 @@ import { Navbar } from 'react-bootstrap'
 //Menu
 import ScrollMenu from '../components/ScrollMenu'
 
+//Timeline List
+import TimelineList from '../components/TimelineList'
+
 
 // CSS styling
 import "../assets/css/main.css"
@@ -262,6 +265,9 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+
+
     <div class="row">
       <div class="col-md-8 section__resume resume-list">
         <h3 class="resume-list_title">employment</h3>
