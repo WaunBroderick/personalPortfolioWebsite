@@ -57,8 +57,8 @@ class TimelineList extends React.Component {
                 <div>
                     <div key={itm} class="resume-list__block"
                              
-                             onMouseOver={e => this.openDescription(itm)}
-                             onMouseOut={e => this.closeDescription(itm)}>
+                             onMouseOver={e => {this.openDescription(itm); }}
+                             onMouseOut={e => {this.closeDescription(itm);}}>
                          <p class="resume-list__block-title">{i.jobName}</p>
                          <p class="resume-list__block-date">{i.jobDuration}</p>
                          <p>
@@ -67,11 +67,11 @@ class TimelineList extends React.Component {
                              <br/>
                          </p>
                          {i.visible ? (
-                                 <div>
+                                  <div style={{paddingBottom: "10px", marginTop: "-20px", paddingLeft: "20px"}}>
                                  {
                                  i.details.map((sub, subindex) => {
                                      return(
-                                        <li>{subindex}</li>
+                                        <li>{sub}</li>
                                      );
                                  })
                                  }

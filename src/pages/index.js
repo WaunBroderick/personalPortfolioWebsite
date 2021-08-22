@@ -250,7 +250,7 @@ export default function Home() {
 <TimelineList 
 title={"Education"}
 listData = {[
-  {jobName: "Trent University", jobDuration:"2013 - 2018", jobRole : "H.BSc Computer Science", visible: false, details: []},
+  {jobName: "Trent University", jobDuration:"2013 - 2018", jobRole : "H.BSc Computer Science", visible: false, details: ["Co-Founder of Trent's Annual Hackathon", "President of the Computer Science Society", "ComSci Student Board Member", "College Orientation Week Leader"]},
   {jobName: "Free Code Camp", jobDuration:"2014 - 2018", jobRole : "Full Stack Development Certification", visible: false, details: []},
 ]}
 />
@@ -259,9 +259,9 @@ listData = {[
 title={"Employment"}
 listData = {[
   {jobName: "Gyroscopic Inc", jobDuration:"JUL 2019 - PRESENT", jobRole : "Co-Founder, CTO", visible: false, details: []},
-  {jobName: "Canadian Armed Forces", jobDuration:"FEB 2011 - PRESENT", jobRole : "Infantry, RCN Diver", visible: false, details: []},
-  {jobName: "Department of National Defence", jobDuration:"MAY 2019 - MAY 2020", jobRole : "Data Science/AI Team, Lead Solutions Developer", visible: false, details: []},
-  {jobName: "TD BANK HQ", jobDuration:"JUL 2018 - MAY 2019", jobRole : "H.BSc Computer Science", visible: false, details: []},
+  {jobName: "Canadian Armed Forces", jobDuration:"FEB 2011 - PRESENT", jobRole : "Infantry, RCN Diver", visible: false, details: ["Infantry Rifle/Machine Gun Training - BMQ/DP1/DP2A", "Winter Warefare Training", "Conflict Resolution Training", "Trained Sentinel Member - Mental healther supporter"]},
+  {jobName: "Department of National Defence", jobDuration:"MAY 2019 - MAY 2020", jobRole : "Data Science/AI Team, Lead Solutions Developer", visible: false, details: ["CONFIDENTIAL"]},
+  {jobName: "TD BANK HQ", jobDuration:"JUL 2018 - MAY 2019", jobRole : "H.BSc Computer Science", visible: false, details: ["Responsible for creating, implementing, educating, and selling AI/DS Solutions to several bank branches", "Product Mgr and Lead Developer on the INPROD AI Tool integration/creation", "Developer & Data Visualizer on The Customer Journey Dashboard"]},
   {jobName: "United Nations", jobDuration:"FEB 2017 - AUG 2017", jobRole : "Front-End Developer", visible: false, details: []},
   {jobName: "Trent University", jobDuration:"SEP 2016 - MAY 2018", jobRole : "Academic Assistant", visible: false, details: []},
   {jobName: "TD Technology Waterloo", jobDuration:"MAY 2017 - AUG 2017", jobRole : "Big Data Intern & Android Developer", visible: false, details: []},
