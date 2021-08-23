@@ -17,6 +17,14 @@ import ScrollMenu from '../components/ScrollMenu'
 //Timeline List
 import TimelineList from '../components/TimelineList'
 
+//Progressbars
+import ProgressLine from "../components/Progressline";
+
+//Scroll Render Functionality
+import { Scroll, withScroll } from 'react-fns'
+import handleViewport from 'react-in-viewport';
+
+
 
 // CSS styling
 import "../assets/css/main.css"
@@ -40,6 +48,9 @@ ReactModal.setAppElement('#___gatsby')
 
 export default function Home() {
 
+
+  const ClientSideOnlyLazy = React.lazy(() => import("../components/Progressline"))
+  const isSSR = typeof window === "undefined"
 
   const [isModalOpen, setIsModalOpen] = React.useState(false)
 
@@ -282,10 +293,19 @@ listData = {[
             <span class="progress-list__skill-title">Javacript (ES6+)</span>
             <span class="progress-list__skill-value">80%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "80%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -296,11 +316,28 @@ listData = {[
             <span class="progress-list__skill-title">ReactJS</span>
             <span class="progress-list__skill-value">80%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "80%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
+              <div>
+
+        
+
+              </div>
+    
+
+
             
               </div>
         </div>
@@ -309,10 +346,19 @@ listData = {[
             <span class="progress-list__skill-title">Python</span>
             <span class="progress-list__skill-value">70%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "70%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "70%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
            
               </div>
@@ -322,10 +368,19 @@ listData = {[
             <span class="progress-list__skill-title">AWS Infrastructure</span>
             <span class="progress-list__skill-value">60%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "60%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "60%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -337,10 +392,19 @@ listData = {[
             <span class="progress-list__skill-title">Product Management</span>
             <span class="progress-list__skill-value">80%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "80%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -350,10 +414,19 @@ listData = {[
             <span class="progress-list__skill-title">Stakeholder Management</span>
             <span class="progress-list__skill-value">90%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "90%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -363,10 +436,19 @@ listData = {[
             <span class="progress-list__skill-title">Data Science & AI Pipelines</span>
             <span class="progress-list__skill-value">70%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "70%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "70%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
             
               </div>
@@ -376,10 +458,19 @@ listData = {[
             <span class="progress-list__skill-title">Leadership & People Managament</span>
             <span class="progress-list__skill-value">80%</span>
           </p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: "80%"}}>
-            </div>
-          </div>
+          {!isSSR &&(
+          <React.Suspense fallback={<div />}>
+            <ClientSideOnlyLazy 
+            label="One visual percentage - changed background"
+            visualParts={[
+              {
+                percentage: "80%",
+                color: "#C0B283"
+              }
+            ]}
+            />
+          </React.Suspense>
+        )}
           <div style={{paddingBottom: '20px'}}>
               </div>
         </div>
