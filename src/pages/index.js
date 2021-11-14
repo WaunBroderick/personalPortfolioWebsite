@@ -42,6 +42,10 @@ import resumeDownload from '../assets/resume/Resume_-_Waun_Broderick_optimize.pd
 // Images
 import profilePic from "../assets/img/profilePic.jpg"
 
+// Instagram Feed
+import InstagramFeed  from 'react-ig-feed'
+import 'react-ig-feed/dist/index.css'
+
 
 ReactModal.setAppElement('#___gatsby')
 
@@ -628,6 +632,29 @@ listData = {[
         ) : ( <div></div>)}
         </div>
 
+
+        <div>
+        { (projectTypeAll || projectTypePM) ?  (
+
+    <Link to="#projects" onClick={()=> handleModalOpen( {
+      projTitle:"Labnetik", 
+      projDescr:"",
+      projLink:"https://labnetik.ca",
+      projImg:"INPROD"
+      })}>
+    <div>
+    <ProjectCard 
+    title={"Labnetik"}
+    category={"software"}
+    description={"INPROD is a flexible, extensible and intelligent tool that can and is used in various fields where there is a need to manually ingest large amounts of physical documents, and give data structure to be better digested. It can batch ingest, optimize, analyze, and extract large amounts of differing information to A great accuracy."}
+    technologies={["Javascript", "NLTK", "Keras", "Tensorflow"]}
+    image={"INPROD"}
+    imageAlt={"image of sample project"}
+    /></div>
+    </Link>
+        ) : ( <div></div>)}
+        </div>
+
 </Scrollbar>
 </div>
 
@@ -696,15 +723,29 @@ listData = {[
           </div>
         </a>
       </div>
-
     </div>
-
-
 
       </section>
 
+      <section id="instagram" class="container section">
+    <div class="row">
+      <div class="col-md-12">
+      <h2 id="resume_header" class="section__title">
+    <div><Typewriter
+            options={{
+              strings: ['Instagram', 'Pictures'],
+              autoStart: true,
+              loop: true,
+              cursor: '_',
+            }}
+          />
+          </div>
+    </h2>
+      </div>
+  
+    </div>
 
-
+      </section>
 
 
 
